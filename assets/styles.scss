@@ -1,3 +1,231 @@
-
+// INCLUDES
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap');
 @import "normalize";
+
+// COLORS
+$color-base: #666;
+$color-accent: #C5B358;
+$color-accent-dark: #8c7a1d;
+
+$svg-base: invert(42%) sepia(0%) saturate(5%) hue-rotate(246deg) brightness(93%) contrast(95%);
+$svg-accent-dark: invert(47%) sepia(27%) saturate(1130%) hue-rotate(13deg) brightness(94%) contrast(89%);
+
+$screen-small: 550px;
+
+// BASE STYLES
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+// LINKS
+a, a:visited {
+    color: $color-base;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+a:hover {
+    color: $color-accent;
+}
+
+// STYLES
+header,
+article,
+footer {
+
+    max-width: 780px;
+    min-width: 350px;
+    margin: 0 auto;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    background-color: white;
+
+}
+
+
+header {
+
+    > nav {
+        
+        padding: 1.5vw 1vw 1vw;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        border-bottom: 1px solid $color-accent;
+
+        @media screen and (max-width: $screen-small) {
+
+            padding: 5vw 0.5vw 3vw;
+
+        }
+
+        > a {
+
+            width: 20%;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 0.8em;
+            font-weight: 300;
+            padding: 2em;
+
+            @media screen and (max-width: $screen-small) {
+
+                font-size: 0.65em;
+
+            }
+            
+            &:nth-child(2) {
+
+                width: 45%;
+                height: 10vw;
+                background-image: url("logo.svg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                padding: 0;
+
+                @media screen and (max-width: $screen-small) {
+
+                    width: 55%;
+                    height: 30vw;
+    
+                }
+
+                &:hover {
+
+                    background-image: url("logo-gold.svg");
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+article {
+
+    div {
+        
+        
+        &.desktop {
+            
+            width: 500px;
+            margin: 3em auto;
+
+            @media screen and (max-width: $screen-small) {
+
+                display: none;
+
+            }
+
+        }
+
+        &.mobile {
+
+            width: 325px;
+            margin: 1em auto;
+            display: none;
+
+            @media screen and (max-width: $screen-small) {
+
+                display: block;
+
+            }
+
+        }
+
+    }
+
+}
+
+footer {
+
+    border-top: 1px solid $color-accent;
+    padding: 1.5vw 1vw 1vw;
+
+    @media screen and (max-width: $screen-small) {
+
+        padding: 5vw 0.5vw 4vw;
+
+    }
+
+    > p {
+
+        color: #666;
+        text-align: center;
+        font-size: 0.65em;
+
+    }
+
+    > section {
+
+        width: 80%;
+        margin: 2.5vw auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        @media screen and (max-width: $screen-small) {
+
+            margin: 10vw auto;
+
+        }
+
+        > a {
+
+            width: 15%;
+
+            @media screen and (max-width: $screen-small) {
+
+                width: 20%;
+
+            }
+
+
+            > img {
+
+                margin: 0 25%;
+                width: 50%;
+                transition: 0.35s;
+                filter: $svg-base;
+
+            }
+
+            > span {
+                padding: 0.75em;
+                display: block;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 0.65em;
+            }
+
+            &:hover {
+
+                > img {
+
+                    filter: $svg-accent-dark;
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
 

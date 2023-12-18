@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap");
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -306,4 +307,149 @@ template {
  */
 [hidden] {
   display: none;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+a, a:visited {
+  color: #666;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+a:hover {
+  color: #C5B358;
+}
+
+header,
+article,
+footer {
+  max-width: 780px;
+  min-width: 350px;
+  margin: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: white;
+}
+
+header > nav {
+  padding: 1.5vw 1vw 1vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 1px solid #C5B358;
+}
+@media screen and (max-width: 550px) {
+  header > nav {
+    padding: 5vw 0.5vw 3vw;
+  }
+}
+header > nav > a {
+  width: 20%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: 300;
+  padding: 2em;
+}
+@media screen and (max-width: 550px) {
+  header > nav > a {
+    font-size: 0.65em;
+  }
+}
+header > nav > a:nth-child(2) {
+  width: 45%;
+  height: 10vw;
+  background-image: url("logo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0;
+}
+@media screen and (max-width: 550px) {
+  header > nav > a:nth-child(2) {
+    width: 55%;
+    height: 30vw;
+  }
+}
+header > nav > a:nth-child(2):hover {
+  background-image: url("logo-gold.svg");
+}
+
+article div.desktop {
+  width: 500px;
+  margin: 3em auto;
+}
+@media screen and (max-width: 550px) {
+  article div.desktop {
+    display: none;
+  }
+}
+article div.mobile {
+  width: 325px;
+  margin: 1em auto;
+  display: none;
+}
+@media screen and (max-width: 550px) {
+  article div.mobile {
+    display: block;
+  }
+}
+
+footer {
+  border-top: 1px solid #C5B358;
+  padding: 1.5vw 1vw 1vw;
+}
+@media screen and (max-width: 550px) {
+  footer {
+    padding: 5vw 0.5vw 4vw;
+  }
+}
+footer > p {
+  color: #666;
+  text-align: center;
+  font-size: 0.65em;
+}
+footer > section {
+  width: 80%;
+  margin: 2.5vw auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+@media screen and (max-width: 550px) {
+  footer > section {
+    margin: 10vw auto;
+  }
+}
+footer > section > a {
+  width: 15%;
+}
+@media screen and (max-width: 550px) {
+  footer > section > a {
+    width: 20%;
+  }
+}
+footer > section > a > img {
+  margin: 0 25%;
+  width: 50%;
+  transition: 0.35s;
+  filter: invert(42%) sepia(0%) saturate(5%) hue-rotate(246deg) brightness(93%) contrast(95%);
+}
+footer > section > a > span {
+  padding: 0.75em;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.65em;
+}
+footer > section > a:hover > img {
+  filter: invert(47%) sepia(27%) saturate(1130%) hue-rotate(13deg) brightness(94%) contrast(89%);
 }/*# sourceMappingURL=styles.css.map */
